@@ -251,24 +251,28 @@ class TabItem extends Component {
           ? intl.formatMessage(messages.disableNotifications)
           : intl.formatMessage(messages.enableNotifications),
         click: () => toggleNotifications(),
+        accelerator: `${cmdOrCtrlShortcutKey()}+N`,
       },
       {
         label: service.isMuted
           ? intl.formatMessage(messages.enableAudio)
           : intl.formatMessage(messages.disableAudio),
         click: () => toggleAudio(),
+        accelerator: `${cmdOrCtrlShortcutKey()}+A`,
       },
       {
         label: service.isDarkModeEnabled
           ? intl.formatMessage(messages.disableDarkMode)
           : intl.formatMessage(messages.enableDarkMode),
         click: () => toggleDarkMode(),
+        accelerator: `${cmdOrCtrlShortcutKey()}+D`,
       },
       {
         label: intl.formatMessage(
           service.isEnabled ? messages.disableService : messages.enableService,
         ),
         click: () => (service.isEnabled ? disableService() : enableService()),
+        accelerator: `${cmdOrCtrlShortcutKey()}+S`,
       },
       {
         label: intl.formatMessage(
