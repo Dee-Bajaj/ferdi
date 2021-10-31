@@ -39,5 +39,3 @@ export const addNewServiceShortcutKey = (isAccelerator = true) =>
   `${cmdOrCtrlShortcutKey(isAccelerator)}+N`;
 export const settingsShortcutKey = (isAccelerator = true) =>
   `${cmdOrCtrlShortcutKey(isAccelerator)}+${isMac ? ',' : 'P'}`;
-export const toggleServiceFeaturesShortcutKey = (isAccelerator = true) =>
-  `${cmdOrCtrlShortcutKey(isAccelerator)}+${shiftKey(isAccelerator)}`;
